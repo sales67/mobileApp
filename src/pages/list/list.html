@@ -23,3 +23,47 @@
 
 
 </ion-content>
+
+<ion-content>
+    
+    
+    <button ion-button  (click)="getMarca()">
+        Llistar Marques
+        </button>
+        <div ion-item *ngFor="let marca of marques">
+            <div><h1>{{marca.name}}</h1>
+                <div class="item-note" item-right>
+                  païs: {{marca.pais}}
+                </div>
+                <div class="item-note" item-right>
+                   telefon: {{marca.telefon}}
+                </div>
+                <div class="item-note" item-right>
+                 correu: {{marca.correu}}
+                </div>    
+                <div class="item-note" item-right>
+                  id: {{marca.id}}
+                </div>
+            </div>          
+            
+        </div>
+      
+      
+        
+    
+    
+    
+    <!--
+  <ion-list>
+    
+      
+     
+  </ion-list>
+   
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+-->
+
+</ion-content>
+
