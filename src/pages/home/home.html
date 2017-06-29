@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pàgina central</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Concessionari Teknós</h3>
+
+  <p>
+    Si vols, pots anar a la aplicació web clicant el següent <a href="http://127.0.0.1:4200/model">link</a> 
+  </p>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+    
+<h4>Quina marca t'agrada més</h4><br>
+<ion-list>
+
+  <ion-item>
+    <ion-label>Ferrari</ion-label>
+    <ion-checkbox [(ngModel)]="ferrari" ></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lamborghini</ion-label>
+    <ion-checkbox [(ngModel)]="lamborghini"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Renault</ion-label>
+    <ion-checkbox [(ngModel)]="renault"></ion-checkbox>
+  </ion-item>
+
+</ion-list>
+
+<button ion-button color="dark" (click)="enviat()">send</button>
+    
+   
+    
+</ion-content>
+
+
+
+
