@@ -4,19 +4,20 @@ import 'rxjs/add/operator/map';
 //import { Cotxe } from './cotxe';
 //import {Model} from './model';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map'
 
 @Injectable()
 
-export class ListMarcaService{
+export class ListAlumneService{
 
-private marcaUrl = 'http://localhost:8080/cotxe/listMarca';
+private alumneUrl = 'http://localhost:8080/escola/listAlumne';
 
 
 constructor(private http: Http){}
 
   errorMessage: string;
-  getMarca() {
-      var a = this.http.get(this.marcaUrl)
+  getAlumnes() {
+      var a = this.http.get(this.alumneUrl)
                 .map(res => res.json())
       return a;
   }

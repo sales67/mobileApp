@@ -1,27 +1,24 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {ListMarcaService} from './list.service';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import {ListAlumneService} from './list.service';
 
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html',
-    providers: [ListMarcaService]
+    providers: [ListAlumneService]
 })
-export class ListPage {
+export class ListAlumneComponent {
 
-  marques;
+  alumnes;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public listMarcaService: ListMarcaService) {   
+  constructor(public navCtrl: NavController, public navParams: NavParams, public listAlumneService: ListAlumneService) {   
     
    
   }
- getMarca(){
-     var a = 'http://localhost:8080/cotxe/listMarcap';  
-      
-     this.listMarcaService.getMarca()
+ getAlumnes(){
+     this.listAlumneService.getAlumnes()
         .subscribe(
-                data => { this.marques = data;console.log(this.marques);},
+                data => { this.alumnes = data;console.log(this.alumnes);},
                 err => console.error(err))  
                 
     
