@@ -6,20 +6,27 @@
     <ion-title>List</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-
-
+    
+    
+    <button ion-button  (click)="getAlumnes()">
+        Llistar Alumnes
+        </button>
+        <div ion-item *ngFor="let alumne of alumnes">
+            <div><h1>{{alumne.nom}}</h1>
+                <div class="item-note" item-right>
+                  id: {{alumne.ida}}
+                </div>
+              <div class="item-note" item-right>
+                   Escola Actual: {{alumne.escolafk.nom}}
+                </div>
+              <!--    <div class="item-note" item-right>
+                 correu: {{alumne.correu}}
+                </div>    
+                <div class="item-note" item-right>
+                  id: {{alumne.id}}
+                </div> -->
+            </div>                
+        </div>
 </ion-content>
+

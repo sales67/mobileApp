@@ -6,31 +6,13 @@ import {AlertController} from 'ionic-angular';
   templateUrl: 'home.html',
     styleUrls: ['/home/home.scss']
 })
-export class HomePage {
+export class HomePage {  
     
-    ferrari;lamborghini;renault;send;
+    constructor(private alertCtrl: AlertController) {}
     
-    /*constructor (navcontroller : NavController){}
-   
+    ferrari;lamborghini;renault;send;    
 
-     updateFerrari() {
-     
-     }updateLamborghini() {
-     
-     }updateRenault() {
-     
-     }
-    
-    enviat(){
-        this.send=true;
-        console.log("enviat");
-    }*/
-    
-    constructor(private alertCtrl: AlertController) {
-
-}
-
-enviat() {
+    enviat() {
     
     if(this.ferrari || this.lamborghini || this.renault){
         let alert = this.alertCtrl.create({      
