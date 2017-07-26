@@ -1,45 +1,52 @@
+
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+      <button style="color:blue" ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Pàgina central</ion-title>
+    <ion-title>SalesGames</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Concessionari Teknós</h3>
-
-  <p>
-    Si vols, pots anar a la aplicació web clicant el següent <a href="http://127.0.0.1:4200/model">link</a> 
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content padding style="background-color:green">  
+    <br><br><br><br>
+    <h2 style="color:blue;text-align:center">
+        50 estrelles i guanyes el premi
+    </h2>
+    <div style="text-align:center">{{contador}}
+    </div>
+    <p style="text-align:center;color:yellow">
+    <ion-icon name="star"></ion-icon>
+    </p>
     
-<h4>Quina marca t'agrada més</h4><br>
-<ion-list>
-
-  <ion-item>
-    <ion-label>Ferrari</ion-label>
-    <ion-checkbox [(ngModel)]="ferrari" ></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Lamborghini</ion-label>
-    <ion-checkbox [(ngModel)]="lamborghini"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Renault</ion-label>
-    <ion-checkbox [(ngModel)]="renault"></ion-checkbox>
-  </ion-item>
-
-</ion-list>
-
-<button ion-button color="dark" (click)="enviat()">send</button>
     
-   
+    <br><br>
+    <p style="text-align:center">
+    <button ion-button (click)=play()>Jugar</button>
+    </p>
+    <p style="text-align:center">
+    <button ion-button menuToggle>Veure Màximes Puntuacions</button>
+    </p>
+    <p style="text-align:center">
+    <button ion-button menuToggle>Paràmetres</button>
+    </p>   
     
+    
+      <ion-fab right bottom>
+    <button ion-fab mini><ion-icon name="share"></ion-icon></button>
+    <ion-fab-list side="top">
+        <a href="http://www.facebook.es"><button ion-fab ><ion-icon name="logo-facebook"></ion-icon></button>
+        </a>      <a href="http://www.youtube.com">
+        <button ion-fab ><ion-icon name="logo-youtube"></ion-icon></button>
+        </a>
+      
+        <a href="https://www.instagram.com/sergisalees"><button ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
+        </a>  
+        <a href="whatsapp://send?abid=1&text=g"><button ion-fab><ion-icon name="logo-whatsapp"></ion-icon></button></a>     
+    </ion-fab-list>
+  </ion-fab>
+
+
 </ion-content>
 
 

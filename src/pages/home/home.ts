@@ -10,7 +10,7 @@ export class HomePage {
     
     constructor(private alertCtrl: AlertController) {}
     
-    ferrari;lamborghini;renault;send;    
+    ferrari;lamborghini;renault;send;contador=0;
 
     enviat() {
     
@@ -30,10 +30,23 @@ export class HomePage {
   });
          alert.present();
     }
+
+    }
     
-  
- // alert.present();
-}
     
+    play(){
+        if (this.contador<49){
+            this.contador++;
+        console.log(this.contador);
+        return this.contador;
+        }
+        this.contador++;
+        let alert = this.alertCtrl.create({      
+    title: 'Molt be',
+    subTitle: 'vols un gomet?',
+    buttons: ['Demiss']
+  });
+         alert.present();        
+    }
     
 }

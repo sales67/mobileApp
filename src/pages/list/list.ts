@@ -19,8 +19,7 @@ export class ListAlumneComponent {
      this.listAlumneService.getAlumnes()
         .subscribe(
                 data => { this.alumnes = data;console.log(this.alumnes);},
-                err => console.error(err))  
-                
+                err => console.error(err))               
     
     }
 }

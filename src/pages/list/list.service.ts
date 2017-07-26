@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map'
 
 export class ListAlumneService{
 
-private alumneUrl = 'http://localhost:8080/escola/listAlumne';
+private alumneUrl = 'http://172.17.0.98:8080/escola/listAlumne';
 
 
 constructor(private http: Http){}
